@@ -13,11 +13,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class HabitTest {
+class CategoryTest {
 
 	private static EntityManagerFactory emf;
 	private EntityManager em;
-	private Habit habit;
+	private Category category;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -32,31 +32,19 @@ class HabitTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		em = emf.createEntityManager();
-		habit = em.find(Habit.class, 1);
+		category = em.find(Category.class, 1);
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
 		em.close();
-		habit = null;
+		category = null;
 	}
 
 	@Test
 	void test() {
-		assertNotNull(habit);
-		assertEquals("Exercise", habit.getName());
-	}
-	
-	@Test
-	void test_habit_to_user_mapping() {
-		assertNotNull(habit.getUser());
-		assertEquals("user", habit.getUser().getUsername());
-	}
-	
-	@Test
-	void test_habit_to_category_mapping() {
-		assertNotNull(habit.getCategory());
-		assertEquals("Health", habit.getCategory().getName());
+		assertNotNull(category);
+		assertEquals("Health", category.getName());
 	}
 
 }

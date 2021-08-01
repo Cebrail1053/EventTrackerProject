@@ -9,7 +9,9 @@
     </provider>
 
 		<!-- List entities here -->
+		<class>com.skilldistillery.tracker.entities.Category</class>
 		<class>com.skilldistillery.tracker.entities.Habit</class>
+		<class>com.skilldistillery.tracker.entities.User</class>
 
 		<!-- End entities list -->
 		<properties>
