@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -28,12 +26,6 @@ public class Habit {
 	@UpdateTimestamp
 	private LocalDate updatedDate;
 	private Integer goal;
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private User user;
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
 
 	public Habit() {
 		
@@ -91,22 +83,6 @@ public class Habit {
 	public String toString() {
 		return "Habit [id=" + id + ", name=" + name + ", description=" + description + ", startDate=" + startDate
 				+ ", updatedDate=" + updatedDate + ", goal=" + goal + "]";
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
 	}
 	
 }

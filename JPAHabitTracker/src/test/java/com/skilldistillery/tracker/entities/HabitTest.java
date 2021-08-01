@@ -47,16 +47,4 @@ class HabitTest {
 		assertEquals("Exercise", habit.getName());
 	}
 	
-	@Test
-	void test_habit_to_user_mapping() {
-		assertNotNull(habit.getUser());
-		assertEquals("user", habit.getUser().getUsername());
-	}
-	
-	@Test
-	void test_habit_to_category_mapping() {
-		assertNotNull(habit.getCategory());
-		assertEquals("Health", habit.getCategory().getName());
-	}
-
 }

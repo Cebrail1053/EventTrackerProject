@@ -21,8 +21,12 @@ USE `habitdb` ;
 DROP TABLE IF EXISTS `habit` ;
 
 CREATE TABLE IF NOT EXISTS `habit` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
+  `description` VARCHAR(500) NULL,
+  `start_date` DATETIME NOT NULL,
+  `updated_date` DATETIME NOT NULL,
+  `goal` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +46,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `habitdb`;
-INSERT INTO `habit` (`id`, `name`) VALUES (1, 'Exercise');
+INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`) VALUES (1, 'Exercise', 'Exercise for at least 30 minutes a day', '2021-06-13', '2021-08-01', NULL);
+INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`) VALUES (2, 'Watch Calorie Intake', 'Pay more attention to labels', '2021-05-29', '2021-08-01', NULL);
 
 COMMIT;
 
