@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Habit Tracker</title>
+<script type="text/javascript" src='js/script.js'></script>
+</head>
+<body>
+	<h1>Habit Tracker</h1>
+
+	<div id="habitListDiv">
+		<table id="habitListTable"></table>
+	</div>
+	<div id='counts'></div>
+	<hr>
+	<div id='habitDetails'></div>
+	<br>
+	<br>
+	<div id='newHabitFormDiv'>
+		<form action="api/habit" method='post' id='newHabitForm' name='newHabitForm'>
+			<label for="name">Name:</label><input type="text" name="name"><br>
+			<label for="description">Description:</label><br>
+			<textarea name="description" id="description" cols="30" rows="10"></textarea><br>
+			<label for="startDate">Start Date:</label><input type="date" name='startDate'><br>
+			<label for="updatedDate">Updated Date</label><input type="date" name='updatedDate'><br>
+			<button name='submit'>Add New Habit</button>
+		</form>
+	</div>
+</body>
+</html>

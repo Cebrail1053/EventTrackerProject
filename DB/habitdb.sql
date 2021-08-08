@@ -21,7 +21,7 @@ USE `habitdb` ;
 DROP TABLE IF EXISTS `habit` ;
 
 CREATE TABLE IF NOT EXISTS `habit` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(500) NULL,
   `start_date` DATETIME NOT NULL,
