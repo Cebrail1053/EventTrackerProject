@@ -14,11 +14,11 @@ Habit Tracker is a web-application that allows you to keep track of habits to he
 | PUT    | `/api/habit`       | Habit JSON   | Updates details for existing habit |
 | DELETE | `/api/habits/{id}` |              | Deletes habit associated with id
 
-<img src='https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png' width=150/>
-<img src='https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png' width=120/>
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png' width=100/>
-<img src='https://wikitech-static.wikimedia.org/w/images/wikitech/8/8e/Mysql_logo.png' width=150/>
-<img src='https://voicefoundry.com/wp-content/uploads/2018/09/feature-aws.jpg' width=200/>
+<img src='https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png' width=150 style="float: left"/>
+<img src='https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png' width=120 style="float: left"/>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png' width=100 style="float: left"/>
+<img src='https://wikitech-static.wikimedia.org/w/images/wikitech/8/8e/Mysql_logo.png' width=150 style="float: left"/>
+<img src='https://voicefoundry.com/wp-content/uploads/2018/09/feature-aws.jpg' width=200 style="float: left"/>
 
 ## Technologies Used
 * Java
