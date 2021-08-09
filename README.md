@@ -20,6 +20,7 @@ Habit Tracker is a web-application that allows you to keep track of habits to he
 <img src='https://wikitech-static.wikimedia.org/w/images/wikitech/8/8e/Mysql_logo.png' width=150 style="float: left"/>
 <img src='https://voicefoundry.com/wp-content/uploads/2018/09/feature-aws.jpg' width=200 style="float: left"/>
 
+
 ## Technologies Used
 * Java
 * Spring Boot
