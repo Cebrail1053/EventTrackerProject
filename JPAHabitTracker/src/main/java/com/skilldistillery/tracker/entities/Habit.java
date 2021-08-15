@@ -26,6 +26,7 @@ public class Habit {
 	@UpdateTimestamp
 	private LocalDate updatedDate;
 	private Integer goal;
+	private boolean achieved;
 
 	public Habit() {
 		
@@ -83,6 +84,14 @@ public class Habit {
 	public String toString() {
 		return "Habit [id=" + id + ", name=" + name + ", description=" + description + ", startDate=" + startDate
 				+ ", updatedDate=" + updatedDate + ", goal=" + goal + "]";
+	}
+
+	public boolean isAchieved() {
+		return achieved;
+	}
+
+	public void setAchieved(boolean achieved) {
+		this.achieved = achieved;
 	}
 	
 }

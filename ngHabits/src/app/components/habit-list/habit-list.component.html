@@ -1,0 +1,50 @@
+<h1>Habit Tracker</h1><hr>
+<h5>Goals Achieved: <span>{{getAchievmentCount()}}</span></h5>
+
+<br><br>
+<div>
+  <table *ngIf="!selected" class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Habit Name</th>
+        <th></th>
+        <th>Goal Met</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let habit of habits">
+        <td (click)="displayHabit(habit)">{{habit.name}}</td>
+        <td><input type="checkbox" name="achieved" [(ngModel)]="habit.achieved"></td>
+        <td>{{habit.achieved}}</td>
+        <td><button (click)="deleteHabit(habit.id)">Stop Tracking</button></td>  <!--TODO: (click)Add Delete Call-->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>
+<form *ngIf="!selected">
+  <input type="text" name="name" placeholder="Habit Name" [(ngModel)]="newHabit.name">
+  <input type="submit" name="submit" value="Add Habit" (click)="addHabit()"> <!--TODO: (click)Add Create Call-->
+</form>
+
+<div id="habitDetails" *ngIf="selected && !editHabit">
+  <h5>{{selected.id}}: {{selected.name}}</h5>
+  <p><em>{{selected.description}}</em></p>
+  <p>Start Date: {{selected.startDate}}</p>
+  <p>Updated Date: {{selected.updatedDate}}</p>
+  <p>Goal: {{selected.goal}} days</p>
+  <p>Goal Reached: {{selected.achieved}}</p>
+  <button (click)="displayTable()">Back</button>
+  <button (click)="setEditHabit()">Edit</button>
+</div>
+
+<div *ngIf="editHabit">
+  Name: <input type="text" name="name" [(ngModel)]="editHabit.name"><br>
+  Description: <input type="text" name="description" [(ngModel)]="editHabit.description"><br>
+  Goal: <input type="number" name="goal" [(ngModel)]="editHabit.goal"><br>
+  Achieved: <input type="checkbox" name="achieved" [(ngModel)]="editHabit.achieved"><br>
+  <input type="submit" value="Save" (click)="updateHabit(editHabit)">
+  <input type="submit" value="Cancel" (click)="editHabit = null">
+</div>

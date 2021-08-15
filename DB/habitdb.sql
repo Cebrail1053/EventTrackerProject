@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `habit` (
   `start_date` DATETIME NOT NULL,
   `updated_date` DATETIME NOT NULL,
   `goal` INT NULL,
+  `achieved` TINYINT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -46,8 +47,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `habitdb`;
-INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`) VALUES (1, 'Exercise', 'Exercise for at least 30 minutes a day', '2021-06-13', '2021-08-01', NULL);
-INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`) VALUES (2, 'Watch Calorie Intake', 'Pay more attention to labels', '2021-05-29', '2021-08-01', NULL);
+INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`, `achieved`) VALUES (1, 'Exercise', 'Exercise for at least 30 minutes a day', '2021-06-13', '2021-08-01', NULL, 0);
+INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`, `achieved`) VALUES (2, 'Watch Calorie Intake', 'Pay more attention to labels', '2021-05-29', '2021-08-01', NULL, 0);
+INSERT INTO `habit` (`id`, `name`, `description`, `start_date`, `updated_date`, `goal`, `achieved`) VALUES (3, 'Shower', 'Be more hygenic', '2020-11-16', '2021-08-04', NULL, 1);
 
 COMMIT;
 
