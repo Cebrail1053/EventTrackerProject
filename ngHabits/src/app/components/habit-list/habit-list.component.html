@@ -1,5 +1,5 @@
 <h1>Habit Tracker</h1><hr>
-<h5>Goals Achieved: <span>{{getAchievmentCount()}}</span></h5>
+<h5>Goals Achieved: <span [ngClass]="getCompletionLevel()">{{getAchievmentCount()}}</span></h5>
 
 <br><br>
 <div>
@@ -15,7 +15,7 @@
     <tbody>
       <tr *ngFor="let habit of habits">
         <td (click)="displayHabit(habit)">{{habit.name}}</td>
-        <td><input type="checkbox" name="achieved" [(ngModel)]="habit.achieved"></td>
+        <td><input type="checkbox" name="achieved" [(ngModel)]="habit.achieved" (change)="updateHabit(habit)"></td>
         <td>{{habit.achieved}}</td>
         <td><button (click)="deleteHabit(habit.id)">Stop Tracking</button></td>  <!--TODO: (click)Add Delete Call-->
       </tr>

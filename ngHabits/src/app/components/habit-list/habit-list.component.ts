@@ -98,4 +98,15 @@ export class HabitListComponent implements OnInit {
     this.selected = null;
   }
 
+  getCompletionLevel() {
+    let completionLevel = this.getAchievmentCount();
+    if(completionLevel < 4) {
+      return "badge bg-danger";
+    } else if (completionLevel < 7) {
+      return "badge bg-warning";
+    } else {
+      return "badge bg-success";
+    }
+  }
+
 }
